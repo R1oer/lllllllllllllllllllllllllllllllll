@@ -1,0 +1,71 @@
+{
+  "expo": {
+    "name": "auto-parts-app",
+    "slug": "auto-parts-app",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/images/icon.png",
+    "scheme": "autopartsapp",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true,
+      "bundleIdentifier": "com.autoparts.app",
+      "buildNumber": "1",
+      "infoPlist": {
+        "UIBackgroundModes": [],
+        "NSCameraUsageDescription": "Приложению требуется доступ к камере для сканирования QR-кодов и фотографирования товаров",
+        "NSPhotoLibraryUsageDescription": "Приложению требуется доступ к фотогалерее для загрузки изображений товаров"
+      }
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/images/adaptive-icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.autoparts.app",
+      "versionCode": 1
+    },
+    "web": {
+      "bundler": "metro",
+      "output": "static",
+      "favicon": "./assets/images/favicon.png"
+    },
+    "plugins": [
+      "expo-router",
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Приложению требуется доступ к вашим фотографиям для загрузки изображений товаров.",
+          "cameraPermission": "Приложению требуется доступ к камере для фотографирования товаров."
+        }
+      ],
+      [
+        "expo-media-library",
+        {
+          "photosPermission": "Приложению требуется доступ к медиатеке для сохранения фотографий.",
+          "savePhotosPermission": "Приложению требуется разрешение на сохранение фотографий.",
+          "isAccessMediaLocationEnabled": true
+        }
+      ]
+    ],
+    "experiments": {
+      "typedRoutes": true
+    },
+    "extra": {
+      "eas": {
+        "projectId": "auto-parts-app-project"
+      }
+    }
+  }
+}
